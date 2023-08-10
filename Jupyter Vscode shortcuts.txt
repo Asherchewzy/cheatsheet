@@ -1,0 +1,51 @@
+---------------------------------------
+Common Shortcuts:
+---------------------------------------
+- Save: Ctrl + S
+- Undo: Ctrl + Z
+- Redo: Ctrl + Shift + Z
+- Copy: Ctrl + C
+- Cut: Ctrl + X
+- Paste: Ctrl + V
+- Find: Ctrl + F
+- Replace: Ctrl + H
+- Select All: Ctrl + A
+- Delete Line: Ctrl + Shift + K
+- Comment/Uncomment Line: Ctrl + /
+- Toggle Sidebar: Ctrl + B
+
+---------------------------------------
+VSCode Shortcuts:
+---------------------------------------
+- Open Command Palette: Ctrl + Shift + P
+- Toggle Terminal: Ctrl + `
+- New File: Ctrl + N
+- Close Tab: Ctrl + W
+- Split Editor: Ctrl + \
+- Navigate Tabs: Ctrl + Tab / Ctrl + Shift + Tab
+- Format Document: Shift + Alt + F
+- Toggle Integrated Terminal: Ctrl + `
+- Navigate Editor Tabs: Ctrl + PageUp / Ctrl + PageDown
+- Toggle Sidebar: Ctrl + B
+
+---------------------------------------
+Jupyter Notebook Shortcuts:
+---------------------------------------
+- Run Cell: Shift + Enter
+- Run Cell and Insert Below: Alt + Enter
+- Insert Cell Above: A
+- Insert Cell Below: B
+- Change Cell Type to Code: Y
+- Change Cell Type to Markdown: M
+- Merge Selected Cells: Shift + M
+- Cut Selected Cells: X
+- Copy Selected Cells: C
+- Paste Cells Below: V
+- Delete Selected Cells: D, D (press D twice)
+- Undo Cell Deletion: Z
+- Interrupt Kernel: I, I (press I twice)
+- Restart Kernel: 0, 0 (press 0 twice)
+- Toggle Line Numbers: Ctrl + L
+- Toggle Output: O
+
+---------------------------------------

@@ -1,0 +1,80 @@
+
+------------------------------------------
+Initializing and Setting Up a Repository:
+------------------------------------------
+0. Show the status of the repository:
+   git status
+
+1. Initialize a new Git repository:
+   git init
+
+2. Add a remote repository (origin):
+   git remote add origin <repository_url>
+
+3. Add all changes for staging:
+   git add .
+
+4. Commit changes with a message:
+   git commit -m "commit message"
+
+5. Push changes to the remote repository:
+   git push -u origin <master;branch_name>
+
+6. View repository history graph:
+   git log --graph --oneline --all
+
+
+------------------------------------------
+Undoing Changes:
+------------------------------------------
+- Unstage changes from the staging area (after git add):
+  git reset HEAD <file_name>
+
+- undo a git commit with a new commmit ("reverts" the changes back to the state before the commit being reverted):
+  git log
+  git revert <commit_hash>
+
+- deleting a file in remote
+  rm <file_name>  
+  git add .
+  git commit -m "Delete <file_name>"
+
+
+------------------------------------------
+Pulling 
+------------------------------------------
+
+- Pull changes from the remote repository:
+  git pull origin <branch_name>
+
+
+------------------------------------------
+Branching and Merging:
+------------------------------------------
+
+- Create a new branch:
+  git branch <branch_name>
+
+- Switch to a branch:
+  git checkout <branch_name>
+
+- Create and switch to a new branch:
+  git checkout -b <new_branch_name>
+
+- Merge a branch into the current branch:
+  git merge <branch_to_merge>
+  
+  git checkout -b feature
+  git add .
+  git commit -m "Add feature changes"
+  git checkout main
+  git merge feature (merge feature into main, feature branch will still exist)
+  git commit -m "Merge feature into main"
+  git push -u origin master
+
+
+- Delete a branch (locally):
+  git branch -d <branch_name>  #good idea after a merge to main/master
+
+- Delete a branch (remotely):
+  git push origin --delete <branch_name>

@@ -1,0 +1,63 @@
+Linux Command Cheat Sheet
+
+Basic Commands:
+- ctrl c               : Cancel an operation
+- ctrl l               : Clear the terminal
+- ~                    : Home directory of the current user
+- pwd                  : Print current working directory file path
+- ls                   : List content in directory
+- ls -l                : List with details
+- ls --color=auto      : Colorize the output
+- cd name              : Change directory to "name"
+- cd path/path/        : Change directory using "path"
+- cd                   : Change to home folder
+- cd ..                : Move up a level
+- cd -                 : Return to the previous directory
+
+
+File and Directory Manipulation:
+- cp file_to_copy.txt new_file.txt             : Copy files and folders directly
+- cp -r dir_to_copy/ new_copy_dir/             : Copy entire directories recursively
+- mkdir dir_name                              : Make a directory
+- rmdir dir_name                              : Remove an empty directory
+- rm filename                                 : Remove and delete a file
+- rm -r dir_to_remove/                        : Remove an empty directory
+- rm -rf dir_with_content_to_remove/          : Force remove a directory with content
+- mv source_file destination_folder/          : Move a file or directory
+- mv file.txt file2.txt                       : Rename a file
+- mv file.txt ./folder/file.txt               : Move a file to a folder
+- cp ./folder1/file.txt ./folder2/file.txt    : Copy a file to another folder
+
+
+Output and Input:
+- echo $path               : Display paths in the environment
+- echo hello\ world       : Output "hello world" (use \ for spaces in file names)
+- echo "hello world"      : Output "hello world" (for file names with spaces)
+- cat                      : Display file content
+- cat < hello.txt          : Print content from hello.txt
+- cat < hello.txt > hello2.txt : Print content from hello.txt to hello2.txt
+
+
+Permissions and Superuser:
+- sudo command            : Run command with superuser (admin) privileges
+- # command               : Run command as root (comment indicates root privileges)
+- sudo !!                 : Repeat the last command with superuser privileges
+
+
+Text Searching:
+- grep pattern filename   : Search for "pattern" in "filename"
+- grep -R pattern folder/ : Recursive search for "pattern" in a folder
+
+
+Additional Common Commands:
+- man command             : Display the manual page for a command
+- df                      : Display disk space usage
+- du                      : Display file and directory space usage
+- ps                      : Display current processes
+- top                     : Monitor system processes in real-time
+- chmod permissions file  : Change file permissions
+- chown user:group file   : Change file ownership
+- tar -cvzf archive.tar.gz files/ : Create a compressed archive
+- tar -xvzf archive.tar.gz      : Extract files from a compressed archive
+- wget URL                : Download files from the internet
+- scp file.txt user@host:/path/ : Securely copy files between hosts

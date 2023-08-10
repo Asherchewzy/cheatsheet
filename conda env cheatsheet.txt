@@ -1,0 +1,98 @@
+---------------------------------------
+Managing Conda Environment:
+---------------------------------------
+
+- List packages:
+  conda list
+
+- List environments:
+  conda info --envs
+
+- Remove environment:
+  conda env remove --name env_name
+
+- Create environment with specific Python version:
+  conda create --name env_name python=3.9.13
+
+
+
+---------------------------------------
+Requirements.txt Method
+---------------------------------------
+
+For Python files:
+- Get a requirements.txt of packages from current directory and subdirectories:
+  pipreqs .
+
+- If issues occur, overwrite existing requirements.txt and specify encoding:
+  pipreqs --force --encoding=utf-8 .
+
+For Jupyter notebooks:
+- Install pipreqs and nbconvert:
+  pip install pipreqs
+  pip install nbconvert
+
+- Convert notebook to script and generate requirements:
+  jupyter nbconvert --output-dir="./reqs" --to script notebook.ipynb
+  cd reqs
+  pipreqs
+
+Creating Environment with Requirements:
+
+1. Create environment with specific Python version:
+   conda create --name env_name python=3.9.13
+
+2. Activate the environment:
+   conda activate env_name
+
+3. Install packages from requirements.txt:
+   pip install -r requirements.txt
+
+
+
+---------------------------------------
+YAML Method
+---------------------------------------
+
+Export Environment to YAML:
+
+1. Activate the environment you want to export:
+   conda activate <myenv_name>
+
+2. Export the environment to a YAML file:
+   conda env export > environment.yml
+
+3. Transfer the environment.yml file to another machine.
+
+Recreate Environment from YAML:
+
+1. Create a new environment from the YAML file:
+   conda env create -n <mynewenv_name> -f environment.yml
+
+2. Activate the new environment:
+   conda activate <mynewenv_name>
+
+
+
+
+
+Other Useful Tips:
+
+- Initiate Conda in PowerShell:
+  conda init powershell
+
+- Install multiple packages:
+  pip install numpy pandas sklearn matplotlib seaborn
+
+
+Using Python and Environment:
+
+- Start Python:
+  python
+
+- Exit Python:
+  exit()
+
+- Interrupt Python:
+  Ctrl + C
+---------------------------------------
