@@ -16,6 +16,10 @@ Initializing and Setting Up a Repository:
 
 4. Commit changes with a message:
    git commit -m "commit message"
+   
+   #long commit msg
+   git commit 
+   ^x to escape
 
 5. Push changes to the remote repository:
    git push -u origin <master;branch_name>
