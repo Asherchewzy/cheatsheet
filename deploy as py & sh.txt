@@ -1,0 +1,63 @@
+------------------------------
+example of a .py deployment
+------------------------------
+
+
+from ashersFunctions import *
+import sys
+
+import sqlite3
+import pandas as pd
+import numpy as np
+import datetime
+import joblib
+import warnings
+
+warnings.filterwarnings("ignore")
+pd.set_option('display.max_columns', None)
+
+def main():
+    '''
+    docstring
+    '''
+    print('Initiating model...\n\n')
+    print('*'*10)
+ 
+    #connect to db
+    conn = sqlite3.connect('src/data/database.db') 
+    df = pd.read_sql_query('SELECT * FROM database', conn)
+    conn.close()
+
+    #preprocesses
+    df_processed = preprocessing(df)
+
+    # Load the saved model from joblib
+    loaded_model = joblib.load('src/joblibs/MaxVotingClassifier.joblib')
+    print("\n\nModel prediction underway...")
+
+    #use loaded model to predict
+    y_pred = loaded_model.predict(df_processed)
+    y_pred_df = pd.DataFrame(data=y_pred, columns=['RainTomorrow_prediction'])
+
+    # Get the current date and time to save into filename
+    now = datetime.datetime.now()
+    date_string = now.strftime("%d%b%Y_%I%M%p").lower()
+
+    #save
+    file_name = "Predictions_" + date_string + ".csv"
+    output_df.to_csv("src/prediction_outputs/"+file_name, index=False)
+    print("\n\nFile has been saved as:", file_name)
+    print("\n\nProcess completed... You may now close the program")
+
+
+if __name__ == '__main__':
+    main()
+
+
+------------------------------
+example of a .sh deployment 
+------------------------------
+
+#!/bin/bash
+chmod +x src/predict.py
+python src/predict.py
