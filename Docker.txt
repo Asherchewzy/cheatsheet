@@ -1,0 +1,60 @@
+Docker Cheat Sheet
+
+# Basic Commands
+- docker version                    # Show Docker version
+- docker info                       # Display Docker system information
+- docker help                       # Show Docker help
+
+# Image Management
+- docker images                     # List all images
+- docker pull <image-name>          # Pull an image from Docker Hub
+- docker build <path>               # Build an image from a Dockerfile
+- docker rmi <image-id>             # Remove an image
+- docker image prune                # Remove unused images
+
+# Container Management
+- docker ps                         # List running containers
+- docker ps -a                      # List all containers
+- docker run <image-name>           # Run a container from an image
+- docker start <container-id>       # Start a stopped container
+- docker stop <container-id>        # Stop a running container
+- docker restart <container-id>     # Restart a container
+- docker rm <container-id>          # Remove a container
+- docker container prune            # Remove stopped containers
+- docker exec -it <container-id> bash  # Run a command in a running container
+
+# Networking
+- docker network ls                 # List all networks
+- docker network create <network-name>  # Create a new network
+- docker network connect <network-name> <container-id>  # Connect container to a network
+- docker network disconnect <network-name> <container-id>  # Disconnect container from a network
+
+# Volume Management
+- docker volume ls                  # List all volumes
+- docker volume create <volume-name>  # Create a new volume
+- docker volume inspect <volume-name>  # Inspect volume details
+- docker volume rm <volume-name>    # Remove a volume
+
+# Docker Compose
+- docker-compose up                 # Start services defined in a Compose file
+- docker-compose down               # Stop and remove services defined in a Compose file
+
+# Dockerfile Instructions
+- FROM                              # Base image
+- RUN                               # Execute command during build
+- COPY / ADD                        # Copy files to the container
+- WORKDIR                           # Set working directory
+- EXPOSE                            # Expose ports
+- CMD / ENTRYPOINT                  # Default command when container starts
+
+# Flags
+- -d, --detach                      # Run container in the background
+- -p, --publish                     # Publish a container's port to the host
+- -v, --volume                      # Bind mount a volume
+- --network                         # Connect to a network
+- -e, --env                         # Set environment variables
+- --name                            # Assign a name to the container
+- --rm                              # Remove container after it exits
+- --restart                         # Define container restart policy
+- -it                               # Interactive mode with a pseudo-TTY
+- --build                           # Build images using a Dockerfile (docker-compose)
