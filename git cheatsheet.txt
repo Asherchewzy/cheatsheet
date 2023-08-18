@@ -85,7 +85,7 @@ Branching and Merging:
 
 
 ------------------------------------------
-Branching and Merging:
+Centralized Workflow: linear
 ------------------------------------------
 - central bare repo created on server
 ssh user@host git init --bare /path/to/repo.git
