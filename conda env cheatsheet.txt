@@ -14,6 +14,12 @@ Managing Conda Environment:
 - Create environment with specific Python version:
   conda create --name env_name python=3.9.13
 
+list specific package version:
+- conda activate base
+
+conda list | grep pandas
+conda list | grep numpy
+
 
 
 ---------------------------------------

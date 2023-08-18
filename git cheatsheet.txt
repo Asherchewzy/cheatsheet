@@ -82,3 +82,44 @@ Branching and Merging:
 
 - Delete a branch (remotely):
   git push origin --delete <branch_name>
+
+
+------------------------------------------
+Branching and Merging:
+------------------------------------------
+- central bare repo created on server
+ssh user@host git init --bare /path/to/repo.git
+
+- every member clones
+git clone ssh://user@host/path/to/repo.git
+
+
+**Fetch updates from central and rebase your changes**
+- someone has pushed changes and thus local history has diverged from the central repository
+- you need to pull the upstream
+- rebase option tells Git to move your commits to the tip of the main branch after sync-ing changes from central repo
+
+                    origin/main
+central o--o--o-----o--o----
+                 \          \
+local             X--o--o     ----o---o  < local added to tip instead
+                       ^
+                       local main
+
+
+git pull --rebase origin main
+
+
+**Conflict from 2 pax working on unrelated feature**
+- git will pause the rebase at current commit and output following message:
+CONFLICT (content): Merge conflict in <some-file>
+
+git status #see where the problem is
+EDIT FILE
+git add <EDITED FILE>
+git rebase --continue
+
+
+**Panic mode: you dont know what is going on**
+git rebase --abort
+
