@@ -1,3 +1,6 @@
+Change global user
+git config --global user.name "New Account Name"
+git config --global user.email "new@example.com"
 
 ------------------------------------------
 Initializing and Setting Up a Repository:
