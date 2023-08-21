@@ -23,6 +23,7 @@ Initializing and Setting Up a Repository:
 
 5. Push changes to the remote repository:
    git push -u origin <master;branch_name>
+   git push -u origin <branch_name>
 
 6. View repository history graph:
    git log --graph --oneline --all
